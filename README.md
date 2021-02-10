@@ -1,2 +1,2 @@
 # proyectos
-just some notes about javascript and examples of code
+just some notes about javascript, git and examples of code
