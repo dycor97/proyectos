@@ -1,0 +1,35 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: ghostwhite;
+}
+
+h2 {
+    color: Steelblue;
+}
+
+table {
+    text-align: start;
+    border: solid 2px;
+    border-color: midnightblue;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: midnightblue;
+    color: mintcream;
+}
+
+td {
+    text-align: left;
+    border: solid 1px;
+}
+
+.code {
+    font-family: monospace;
+    font-size: large;
+    background-color: moccasin;
+}
