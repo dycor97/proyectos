@@ -1,0 +1,120 @@
+body {
+    margin: 0 10%;
+    font-family: "Heboo", sans-serif;
+    font-size: 16px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.container {
+    padding: 10px;
+    margin: 10px auto;
+    border: 2px solid black;
+}
+
+.color-container,
+.font-container,
+.text-container,
+.button-container {
+    width: 100%;
+}
+
+.color-panel {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    margin: 20px auto;
+    min-height: 100px;
+}
+
+.blue-sapphire {
+    background-color: #1F547D;
+    color: whitesmoke;
+}
+
+.teal-blue {
+    background-color: #247086;
+    color: whitesmoke;
+}
+
+.verdigris {
+    background-color: #3EB6AC;
+    color: whitesmoke;
+}
+
+.pale-robin-egg-blue {
+    background-color: #93EDD2;
+    color: black;
+}
+
+.tea-green {
+    background-color: #C7FFCB;
+    columns: black;
+}
+
+.font-panel {
+    width: 30%;
+    display: inline-block;
+    padding-left: 10px;
+    
+}
+
+.font-label {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.thin {
+    font-weight: thin;
+}
+
+.extra-light {
+    font-weight: 200;
+}
+
+.regular {
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.jost {
+    font-family: 'Jost', sans-serif;
+}
+
+.source-sans-pro {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.heebo {
+    font-family: 'Heebo', sans-serif;
+}
+
+.text-panel h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.text-panel h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.button-panel {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    margin: 10px auto;
+    min-height: 50px;
+    border: 2px solid black;
+    border-radius: 15%;
+}
+
