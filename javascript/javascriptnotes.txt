@@ -17,3 +17,15 @@ default exports use export default to export JavaScript objects, functions, and 
 named exports use the export keyword to export data in variables.
 named exports can be aliased with the as keyword.
 import is a keyword that imports any object, function, or data type.
+
+Error handling.
+
+How mistakes in programming leads to errors.
+Why errors are useful for developers.
+Errors will prevent a program from executing unless it is handled.
+How to create an error using the Error() function.
+How to throw an error object using the throw keyword.
+How to use the try...catch statement to handle thrown errors.
+Evaluating code in a try block to anticipate errors.
+Catching the error in a catch block to allow our program to continue running.
+Why the try...catch statement would be useful in a program.
