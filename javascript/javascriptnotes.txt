@@ -47,3 +47,54 @@ Promise composition enables us to write complex, asynchronous code that’s stil
 To use promise composition correctly, we have to remember to return promises constructed within a .then().
 We should chain multiple promises rather than nesting them.
 To take advantage of concurrency, we can use Promise.all().
+
+Async...await
+Let’s review what you’ve learned:
+
+async...await is syntactic sugar built on native JavaScript promises and generators.
+We declare an async function with the keyword async.
+Inside an async function we use the await operator to pause execution of our function until an asynchronous action completes and the awaited promise is no longer pending .
+await returns the resolved value of the awaited promise.
+We can write multiple await statements to produce code that reads like synchronous code.
+We use try...catch statements within our async functions for error handling.
+We should still take advantage of concurrency by writing async functions that allow asynchronous actions to happen in concurrently whenever possible.
+
+AJAX Request basic GET
+const xhr = new XMLHttpRequest();
+const url = 'https://api-to-call.com/endpoint';
+xhr.responseType = 'json';
+xhr.onreadystatechange = () => {
+  if(xhr.readyState === XMLHttpRequest.DONE){
+    return xhr.response;
+  }
+};
+
+xhr.open('GET', url);
+xhr.send();
+
+AJAX Request basic POST
+const xhr = new XMLHttpRequest();
+const url = 'https://api-to-call.com/endpoint';
+const data = JSON.stringify({id: '200'});
+
+xhr.responseType = 'json';
+xhr.onreadystatechange = () => {
+  if(xhr.readyState === XMLHttpRequest.DONE){
+    return xhr.response;
+  }
+};
+xhr.open('POST', url);
+xhr.send(data);
+
+Request
+You’ve done an amazing job navigating through making XHR GET and POST requests! Take some time to review the core concepts before moving on to the next lesson.
+JavaScript is the language of the web because of its asynchronous capabilities. AJAX, which stands for Asynchronous JavaScript and XML, is a set of tools that are used together to take advantage of JavaScript’s asynchronous capabilities.
+There are many HTTP request methods, two of which are GET and POST.
+GET requests only request information from other sources.
+POST methods can introduce new information to other sources in addition to requesting it.
+GET requests can be written using an XMLHttpRequest object and vanilla JavaScript.
+POST requests can also be written using an XMLHttpRequest object and vanilla JavaScript.
+Writing GET and POST requests with XHR objects and vanilla JavaScript requires constructing the XHR object using new, setting the responseType, creating a function that will handle the response object, and opening and sending the request.
+To add a query string to a URL endpoint you can use ? and include a parameter.
+To provide additional parameters, use & and then include a key-value pair, joined by =.
+Determining how to correctly write the requests and how to properly implement them requires carefully reading the documentation of the API with which you’re working.
