@@ -98,3 +98,64 @@ Writing GET and POST requests with XHR objects and vanilla JavaScript requires c
 To add a query string to a URL endpoint you can use ? and include a parameter.
 To provide additional parameters, use & and then include a key-value pair, joined by =.
 Determining how to correctly write the requests and how to properly implement them requires carefully reading the documentation of the API with which you’re working.
+
+GET and POST requests can be created a variety of ways.
+Use AJAX to asynchronously request data from APIs. fetch() and async/await are new functionalities developed in ES6 (promises) and ES8 respectively.
+Promises are a new type of JavaScript object that represent data that will eventually be returned from a request.
+fetch() is a web API that can be used to create requests. fetch() will return promises.
+We can chain .then() methods to handle promises returned by fetch().
+The .json() method converts a returned promise to a JSON object.
+async is a keyword that is used to create functions that will return promises.
+await is a keyword that is used to tell a program to continue moving through the message queue while a promise resolves.
+await can only be used within functions declared with async.
+
+closures
+function makeAdder(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+var add5 = makeAdder(5);
+var add20 = makeAdder(20);
+add5(6); // ?
+add20(7); // ?
+A closure is the combination of a function and the scope object in which it was created. 
+Closures let you save state — as such, they can often be used in place of objects. 
+
+function createGreeting(greeting) { 
+ return function(name) { 
+   console.log(greeting + “ “ + name) 
+ } 
+} 
+var sayHi = createGreeting(“Hi”) 
+sayHi(“Jack”) // “Hi Jack” 
+var sayHello = createGreeting(“Hello”) 
+sayHello(“Jack”) // “Hello Jack”
+
+
+destructuring arrays
+let cars = ['ferrari', 'tesla', 'cadillac'];
+let [car1, car2, car3] = cars;
+console.log(car1, car2, car3); // Prints: ferrari tesla cadillac
+
+destructuring objects
+let destinations = { x: 'LA', y: 'NYC', z: 'MIA' };
+let { x, y, z } = destinations;
+console.log(x, y, z); // Prints LA NYC MIA
+
+destructuring function parameters
+let truck = {
+  model: '1977 Mustang convertible',
+  maker: 'Ford',
+  city: 'Detroit',
+  year: '1977',
+  convertible: true
+};
+ 
+const printCarInfo = ({model, maker, city}) => {
+  console.log(`The ${model}, or ${maker}, is in the city ${city}.`);
+};
+ 
+printCarInfo(truck);
+// Prints: The 1977 Mustang convertible, or Ford, is in the city Detroit.
+
