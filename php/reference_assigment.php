@@ -8,4 +8,8 @@
     
     // Don't change the line below
     echo "\nYour order is: $very_bad_unclear_name.";
+
+    //By value—this creates two variables which hold copies of the same value but remain independent entities.
+    //By reference—this creates two variable names (aliases) which point to the same space in memory. 
+    //They cannot be modified separately!
 ?>

@@ -29,3 +29,31 @@ $dans_grades = [$assignment_one["Dan"], $assignment_two["Dan"], $assignment_thre
 echo $assignment_two[$student_name];
 
 //Changing and removing
+$my_car = [
+    "oil" => "black and clumpy",
+    "brakes" => "new",
+    "tires" => "old with worn treads",
+    "filth" => "bird droppings", 
+    "wiper fluid" => "full", 
+    "headlights" => "bright"
+  ];
+  print_r($my_car);
+  
+  // Write your code below:
+  $my_car["oil"] = "new and premium";
+  $my_car["tires"] = "new with deep treads";
+  unset($my_car["filth"]);
+  
+  print_r($my_car);
+
+  //joining arrays
+  
+$giraffe_foods = ["dip"=>"guacamole", "chips"=>"corn", "entree"=>"grilled chicken"];
+
+$impala_foods = ["dessert"=>"cookies", "vegetable"=>"asparagus", "side"=>"mashed potatoes"];
+
+$rat_foods = ["dip"=>"mashed earth worms", "entree"=>"trash pizza", "dessert"=>"sugar cubes", "drink"=>"lemon water"];
+
+// Write your code below:
+$potluck = $giraffe_foods + $impala_foods + $rat_foods;
+print_r($potluck);
